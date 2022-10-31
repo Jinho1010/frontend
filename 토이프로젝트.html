@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+
+    <title>상품 목록 페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Nanum Pen Script', cursive;
+
+        }
+
+        .mytitle {
+            background-color: #800080;
+
+            height: 180px;
+
+            text-align: center;
+
+            border-radius: 10px;
+            font-size: 50px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /*.myimg {*/
+        /*    padding: 10px;*/
+        /*    width: 150px;*/
+        /*    height: 110px;*/
+        /*    border-radius: 20px;*/
+        /*}*/
+
+
+        .myrecord {
+
+            width: 150px;
+            margin: auto;
+            margin-top: 100px;
+
+        }
+
+
+        .card {
+
+            width: 500px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+
+        .btn-outline-secondary {
+            padding: 8px 10px 8px 8px;
+            font-size: 21px;
+
+            border-radius: 50px;
+        }
+
+
+        .mywriting {
+            margin: 10px 10px 10px 10px;
+            font-size: 100px;
+        }
+
+
+        .winecards {
+            max-width: 1500px;
+            width: 95%;
+            margin: 30px auto 10px auto;
+        }
+
+
+        .cardimg {
+            margin: auto;
+        }
+
+
+        .card-title {
+            font-size: 60px;
+        }
+
+
+        .mybtns {
+            margin-top: 10px;
+        }
+
+
+        .card-warp{
+            max-width: 500px;
+            width: 95%;
+            margin: 20px auto 0px auto;
+
+            box-shadow: 0px 0px 3px 0px gray;
+            display: none;
+        }
+
+
+
+
+    </style>
+    <script>
+
+        $(document).ready(function(){
+            listing();
+            });
+
+            function listing() {
+            console.log('화면 로딩 후 잘 실행되었습니다');
+            }
+
+
+
+
+                    $.ajax({
+            type: "GET",
+            url: "https://www.winenara.com/shop/product/product_lists?sh_category1_cd=10000&sh_category2_cd=10100&sh_category3_cd=10101",
+            data: {},
+            success: function(response){
+            console.log(response)
+            }
+            })
+
+
+
+
+
+
+
+
+
+
+
+        function hey() {
+            alert('안녕!');
+        }
+
+
+        function open_card() {
+            $('#post-box').show()
+        }
+
+        function close_card() {
+            $('#post-box').hide()
+        }
+
+
+
+
+
+
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+
+
+
+
+<div class="mytitle">
+
+    <img class="myimg" src="https://cdn-0.emojis.wiki/emoji-pics/microsoft/wine-glass-microsoft.png"
+         jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb"
+         alt="🍷 Wine Glass Emoji — Meaning, Copy &amp; Paste, Combinations 🍷➡️😋" data-noaft="1"
+         style="width: 140px; height: 100px; margin: 20px 0px;">
+    <h1 class="mywriting">나만의 와인은 ? </h1>
+</div>
+
+
+
+
+
+
+
+
+
+    <div class="myrecord" id="record-box">
+        <p>
+            <button onclick="open_card()" type="button" class="btn btn-outline-secondary">익명 추천 와인 기록지</button>
+        </p>
+    </div>
+
+
+    <div class="card-warp" id="post-box">
+
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">별점</label>
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected>-- 선택하기 --</option>
+                        <option value="1">⭐</option>
+                        <option value="2">⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="5">⭐⭐⭐⭐⭐</option>
+                    </select>
+                </div>
+                <div class="form-floating">
+<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+          style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">와인 이름 + 코멘트</label>
+                </div>
+                <div class="mybtns">
+                    <button type="button" class="btn btn-dark">기록하기</button>
+                    <button onclick="close_card()" type="button" class="btn btn-outline-dark" >닫기</button>
+
+                </div>
+            </blockquote>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="winecards">
+
+    <div id="wrap" class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card">
+                <div class="cardimg">
+                    <img class="cardimg" src="https://www.ahiddenvine.com/assets/images/bottle-shot.jpeg"
+                         jsaction="load:XAeZkd;"
+                         jsname="HiaYvf" class="n3VNCb KAlRDb" class="card-img-top"
+                         alt="Realm Cellars 2018 The Absurd Red Napa Valley" data-noaft="1"
+                         style="width: 150px; height: 350px; margin: 0px;" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h1 onclick="hey()" class="card-title">
+                        <button type="button" class="btn btn-outline-secondary">뤠암 업서드</button>
+                    </h1>
+                    <h5><span class="" style="background:#C50D0D;">&nbsp;</span> 레드 🇺🇸 미국</h5>
+                    <p class="card-text">앱서드는 최고의 빈티지에 뤠암의 다른 와인에 영향을 주지 않고 만들 수 있는 충분한 양의 포도가 있는 특정 해에만 만들어진다. 블렌딩에
+                        사용...</p>
+                    <p> 3,000,000원 /<a
+                            href="https://www.winenara.com/shop/product/product_lists?sh_category1_cd=10000&sh_category2_cd=10100">
+                        매장문의 </a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="cardimg">
+                    <img class="cardimg" src="https://www.ahiddenvine.com/assets/images/bottle-shot.jpeg"
+                         jsaction="load:XAeZkd;"
+                         jsname="HiaYvf" class="n3VNCb KAlRDb" class="card-img-top"
+                         alt="Realm Cellars 2018 The Absurd Red Napa Valley" data-noaft="1"
+                         style="width: 150px; height: 350px; margin: 0px;" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h1 onclick="hey()" class="card-title">
+                        <button type="button" class="btn btn-outline-secondary">뤠암 업서드</button>
+                    </h1>
+                    <h5><span class="" style="background:#C50D0D;">&nbsp;</span> 레드 🇺🇸 미국</h5>
+                    <p class="card-text">앱서드는 최고의 빈티지에 뤠암의 다른 와인에 영향을 주지 않고 만들 수 있는 충분한 양의 포도가 있는 특정 해에만 만들어진다. 블렌딩에
+                        사용...</p>
+                    <p> 3,000,000원 /<a
+                            href="https://www.wine21.com/main.html">
+                        매장문의 </a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="cardimg">
+                    <img class="cardimg" src="https://www.ahiddenvine.com/assets/images/bottle-shot.jpeg"
+                         jsaction="load:XAeZkd;"
+                         jsname="HiaYvf" class="n3VNCb KAlRDb" class="card-img-top"
+                         alt="Realm Cellars 2018 The Absurd Red Napa Valley" data-noaft="1"
+                         style="width: 150px; height: 350px; margin: 0px;" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h1 onclick="hey()" class="card-title">
+                        <button type="button" class="btn btn-outline-secondary">뤠암 업서드</button>
+                    </h1>
+                    <h5><span class="" style="background:#C50D0D;">&nbsp;</span> 레드 🇺🇸 미국</h5>
+                    <p class="card-text">앱서드는 최고의 빈티지에 뤠암의 다른 와인에 영향을 주지 않고 만들 수 있는 충분한 양의 포도가 있는 특정 해에만 만들어진다. 블렌딩에
+                        사용...</p>
+                    <p> 3,000,000원 /<a
+                            href="https://www.winenara.com/shop/product/product_lists?sh_category1_cd=10000&sh_category2_cd=10100">
+                        매장문의 </a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</body>
+</html>

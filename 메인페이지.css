@@ -1,0 +1,82 @@
+*{
+    font-family: 'Nanum Pen Script', cursive;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+}
+
+.mytitle{
+    background-color: #800080;
+
+            height: 180px;
+
+            text-align: center;
+
+            border-radius: 10px;
+            font-size: 30px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+}
+.nav{
+    font-size: 30px;
+    display: flex;
+
+}
+.nav > li{
+    margin-left: 60px;
+}
+.nav2{
+    display: flex;
+    margin-left: 60px;
+}
+.nav2 > li{
+    margin-left: 50px;
+}
+
+.mtwine{
+    text-align: center;
+    font-size: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.winecard{
+    max-width: 1500px;
+    width: 95%;
+    margin: 30px auto 10px auto;
+}
+.searchArea{
+    width: 800px;
+    height: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin: auto;
+}
+.searchArea > form > input{
+    width: 600px;
+    height: 40px;
+    padding-left: 10px;
+    justify-content: center;
+}
+.searchArea > form > span{
+    height: 300px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card {
+    width: 33%;
+    float: left;
+}
+
+.cardimg{
+    text-align: center;
+}
