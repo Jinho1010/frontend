@@ -49,9 +49,18 @@
     align-items: center;
 }
 .winecard{
-    max-width: 1500px;
-    width: 95%;
-    margin: 30px auto 10px auto;
+    width: 90%;
+    margin: 30px auto 30px auto;
+    display: flex;
+}
+.card-body{
+    font-size: 20px;
+}
+.card-text{
+    font-size: 25px;
+}
+.wine_ex{
+    font-size: 20px;
 }
 .searchArea{
     width: 800px;
