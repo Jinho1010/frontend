@@ -1,0 +1,91 @@
+*{
+    font-family: 'Nanum Pen Script', cursive;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    list-style: none;
+}
+.mytitle{
+    background: #B61159;
+    height: 180px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.mytitle > img {
+    width: 140px;
+    height: 100px;
+    margin: 50px 40px;
+}
+.navbar_menu {
+    display: flex;
+    padding-left: 0px;
+}
+.navbar_menu > li {
+    padding: 8px 12px;
+    margin: 30px;
+}
+.mtwine {
+    font-size: 35px;
+    text-align: center;
+}
+
+.product-list {
+    width: 1500px;
+    height: 555px;
+    background: white;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.prbox{
+    width: 25%;
+    height: 550px;
+    background: #B61159;
+    padding: 20px;
+    box-sizing: border-box;
+    float: left;
+    border-radius: 20px;
+}
+
+.img-box > a > img{
+    width: 100%;
+    height: 330px;
+    border-radius: 10px;
+}
+.text-box{
+    height: 175px;
+    text-align: center;
+    margin-top: 15px;
+    background: white;
+    border-radius: 10px;
+}
+.text-box > h5{
+    font-size: 25px;
+}
+.text-box > h4{
+    font-size: 20px;
+}
+.text-box > h6{
+    font-size: 15px;
+}
+.atg{
+    font-size: 18px;
+}
+.table{
+    border: 1px solid black;
+    width: 40%;
+
+}
